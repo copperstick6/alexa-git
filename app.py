@@ -4,7 +4,6 @@ from flask import Flask, render_template, request, redirect
 from flask_ask import Ask, statement, question, session, request
 import urllib2
 import json
-import emailtext
 import gitFeed
 
 app = Flask(__name__)
@@ -16,9 +15,14 @@ logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 def welcome():
     return question(render_template('welcome'))
 
-@ask.intent('LoginIntent')
-def displayCard():
-    return question(render_template('login_please')).link_account_card()
+@ask.intent('selectionIntent', convert={'choice':int})
+def getChoice(choice):
+    if choice == 1:
+        a = gitFeed.gitEvents()
+        answer = a.getEvents()
+        numAnswer = a.getCount()
+        finalStatement = "You have " + str(numAnswer) + " new events. " + answer
+        return statement(finalStatement)
 
 if __name__ == '__main__':
     app.run(debug=True)
