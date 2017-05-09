@@ -1,8 +1,10 @@
 import urllib2
 import json
-import time
+import keys
 
-gitUrl = "https://api.github.com/users/copperstick6/received_events"
+gitUrl = "https://api.github.com/users/" + keys.gitUsername()
+gitUrl += "/received_events"
+
 
 class gitEvents():
     def __init__(self):
