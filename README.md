@@ -7,11 +7,11 @@ I'll be adding lambda support in v2.
 
 ### Step 2: Grab your API keys   
 You need to first create a keys.py file which will store your API keys and Git usernames. Grab a newsapi key [here](https://newsapi.org/techcrunch-api). Create two methods, one called techAPI, and the other called gitUsername. Below is an example:   
-'''def gitUsername():
+```def gitUsername():
       return "copperstick6"
    def techAPI():
       return "yourAPIKeyHere"
-'''  
+``` 
 
 ### Step 3: Run the server   
 This utilizes python2.7. Make sure to pip install -r requirements.txt to install requirements and then open up a console and type the command python app.py to run the server locally
