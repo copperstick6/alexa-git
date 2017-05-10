@@ -1,0 +1,22 @@
+{
+  "intents": [
+    {
+      "slots": [
+        {
+          "name": "choice",
+          "type": "AMAZON.NUMBER"
+        }
+      ],
+      "intent": "selectionIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "number",
+          "type": "AMAZON.NUMBER"
+        }
+      ],
+      "intent": "techCrunchIntent"
+    }
+  ]
+}
