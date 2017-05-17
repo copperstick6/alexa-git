@@ -1,5 +1,6 @@
 # alexa-git   
 Just another one of my crazy ideas.    
+Easy and simple mornings. Listen to TechCrunch, and chill out to your git feed updates.
   
 ## Setup    
 I'll be adding lambda support in v2.  
