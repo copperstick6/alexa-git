@@ -1,2 +1,5 @@
-selectionIntent {choice}
-techCrunchIntent Choice {number}
+gitIntent git
+techCrunchIntent tech
+inspirationIntent quote
+techCrunchIntent tech crunch
+techCrunchChoiceIntent Choice {number}

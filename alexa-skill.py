@@ -44,7 +44,7 @@ def getTechCrunch():
     finalStatement += " Select one of " + str(count) + " choice to hear a description of the article"
     return question(finalStatement)
 
-@ask.intent('inspirationIntennt')
+@ask.intent('inspirationIntent')
 def getQuote():
     a = qod.QOD()
     return statement(a.getQuote())

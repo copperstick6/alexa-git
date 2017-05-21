@@ -16,7 +16,13 @@
           "type": "AMAZON.NUMBER"
         }
       ],
-      "intent": "techCrunchIntent"
-    }
+      "intent": "techCrunchChoiceIntent"
+    },
+  {
+    "intent": "gitIntent"
+  },
+  {
+    "intent": "inspirationIntent"
+  }
   ]
 }
