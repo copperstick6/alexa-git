@@ -27,3 +27,5 @@ Go to interaction model (click next). Copy the contents of interactionmodel.txt 
 The Configuration is pretty important. Click HTTPS and North America, and copy the ngrok.io link found in your console that's running the ./ngrok command. It should be next to forwarding. Paste it into the box under North America. Click Next.  
 
 ### Step 6: You're all done! Test via echosim.io or test via your own Alexa!
+
+sudo -H pip install awscli --upgrade --ignore-installed six
