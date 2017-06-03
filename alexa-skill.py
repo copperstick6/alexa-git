@@ -25,22 +25,18 @@ def getGit():
     a = gitFeed.gitEvents()
     answer = a.getEvents()
     numAnswer = a.getCount()
-    finalStatement = "You have " + str(numAnswer) + " new events. " + answer
+    finalStatement = "You have " + str(numAnswer) + " new events. " + str(answer)
     return statement(finalStatement)
 
 @ask.intent('techCrunchIntent')
 def getTechCrunch():
     a = techcrunch.techNews()
     a.getNews()
-    global newsList
-    newsList = a.getList()
-    global numNews
-    numNews = len(newsList)
+    news = a.getList()
     count = a.getCount()
     finalStatement = ""
-    print newsList[0][0]
     for i in range(0, count):
-        finalStatement += "Article Number " + str(i + 1) + ". " + newsList[i][0].encode('utf-8') + " "
+        finalStatement += "Article Number " + str(i + 1) + ". " + news[i][0].encode('utf-8') + " "
     finalStatement += " Select one of " + str(count) + " choice to hear a description of the article"
     return question(finalStatement)
 
@@ -51,9 +47,13 @@ def getQuote():
 
 @ask.intent('techCrunchChoiceIntent', convert={'number': int})
 def getNews(number):
+    a = techCrunch.techNews()
+    a.getNews()
+    news = a.getList()
+    numNews = a.getCount()
     if number > numNews:
         return statement("Invalid choice. Choose again.")
-    return statement(newsList[number][1].encode('utf-8') + ". More to be continued on the article.")
+    return statement(news[number][1].encode('utf-8') + ". More to be continued on the article.")
 
 
 
