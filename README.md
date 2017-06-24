@@ -6,7 +6,8 @@ Easy and simple mornings. Listen to TechCrunch, and chill out to your git feed u
 I'll be providing two methods of setup, one locally, the other one by using zappa to deploy to AWS.
 
 # Deploying to AWS via Zappa:  
-1. In order to deploy to via zappa, you need to make a virtual environment. Create one via the command virtualenv venv.  
+https://developer.amazon.com/blogs/post/8e8ad73a-99e9-4c0f-a7b3-60f92287b0bf/new-alexa-tutorial-deploy-flask-ask-skills-to-aws-lambda-with-zappa  
+1. In order to deploy to via zappa, you need to make a virtual environment. Create one via the command virtualenv venv.
 
 2. After creating the virtual environment, you need to cd into the venv directory by running the command cd venv.   
 
